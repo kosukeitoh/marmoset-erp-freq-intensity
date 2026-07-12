@@ -1,0 +1,60 @@
+# --- Data ---
+# BIDS datasets are not stored in the repo (too large)
+# Keep placeholder files (.gitkeep, README.md) but exclude everything else
+data/*
+!data/.gitkeep
+!data/README.md
+
+# --- Outputs ---
+# figures/ is fully generated; nothing to commit
+figures/
+
+# outputs/ holds generated figures and stats TSVs
+# component_peaks.json is a pipeline artifact derived from the data
+outputs/*.pdf
+outputs/*.json
+outputs/stats/
+outputs/exploration/*
+!outputs/exploration/.gitkeep
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Environment ---
+.env
+.venv/
+venv/
+
+# --- Claude Code ---
+.claude/
+
+# --- Editor ---
+.vscode/
+!.vscode/settings.json.sample
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- EEG/MNE files (prevent accidental commits) ---
+*.fif
+*.eeg
+*.vhdr
+*.vmrk
+*.edf
+*.bdf
+*.set
+*.fdt

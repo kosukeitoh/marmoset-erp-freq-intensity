@@ -1,0 +1,3 @@
+services:
+  python3-mne:
+    build: .

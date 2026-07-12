@@ -1,0 +1,23 @@
+{
+    "name": "MNE Python Dev Container",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "."
+    },
+    "workspaceFolder": "/workspace", 
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "mounts": [
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached"
+    ],
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "python.defaultInterpreterPath": "/opt/conda/envs/mne_env/bin/python"
+        },
+        "extensions": [
+          "ms-python.python",
+          "ms-toolsai.jupyter"
+        ]
+      }
+    }
+  }
